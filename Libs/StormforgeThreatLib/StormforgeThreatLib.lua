@@ -75,6 +75,11 @@ function STL.split(str)
 	return list
 end
 
+-- Converts GUID string to the DTM format [0xf0 => 0xF0]
+local function formatDTMGUID(guid)
+	return "0x" .. string.sub(string.upper(guid), 3)
+end
+
 function STL.parseThreatUpdateMsg(msg, msg_type)
 	--threat_data: {npcGUID, npcUnitName, unit1GUID, unit1Name, unit1Threat, unit2GUID, unit2Name, unit2Threat, ...}
 	local threat_data = STL.split(msg)
@@ -109,6 +114,9 @@ function STL.parseThreatUpdateMsg(msg, msg_type)
 			threat = threat
 		})
 	end
+
+	-- Hook here for external threat meters
+	DTM_ThreatList_Modify(npcUnitName, formatDTMGUID(npcGUID), unitName, formatDTMGUID(unitGUID), "SET", threat, 1)
 
 	threatTable[npcGUID].GUIDsByThreatRank = {}
 
