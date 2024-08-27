@@ -7,6 +7,9 @@
 ## Dependencies:
 ## OptionalDeps: CoolLib
 
+Libs\LibStub\LibStub.lua
+Libs\StormforgeThreatLib\StormforgeThreatLib.lua
+
 Bindings.xml
 
 DiamondThreatMeter.xml
