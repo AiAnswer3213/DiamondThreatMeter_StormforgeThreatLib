@@ -113,10 +113,10 @@ function STL.parseThreatUpdateMsg(msg, msg_type)
 			unitGUID = unitGUID,
 			threat = threat
 		})
-	end
 
-	-- Hook here for external threat meters
-	DTM_ThreatList_Modify(npcUnitName, formatDTMGUID(npcGUID), unitName, formatDTMGUID(unitGUID), "SET", threat, 1)
+		-- Hook here for external threat meters
+		DTM_ThreatList_Modify(npcUnitName, formatDTMGUID(npcGUID), unitName, formatDTMGUID(unitGUID), "SET", threat, 1)
+	end
 
 	threatTable[npcGUID].GUIDsByThreatRank = {}
 
