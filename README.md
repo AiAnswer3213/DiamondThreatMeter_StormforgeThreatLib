@@ -1,6 +1,6 @@
 # DiamondThreatMeter STLib support
 
-DiamondThreatMeter is a World of Warcraft threat meter addon updated to use the Stormforge Threat Library for accurate threat values. Compatible with version 2.4.3.
+DiamondThreatMeter updated to use the Stormforge Threat Library for accurate threat values. Compatible with version 2.4.3.
 
 ![Meter example](https://github.com/user-attachments/assets/d5a05593-cc57-4df5-9154-5e6b6af1d35e)
 
